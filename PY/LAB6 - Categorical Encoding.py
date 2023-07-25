@@ -16,7 +16,7 @@ final_df = df.join(encoder_df)
 print(final_df)
 
 df1 = pd.DataFrame({'Gender':['M','M','F','M','F','F','M','F','M','F'],
-                   'Degree':['BCOM','BTECH','BCA','BTECH','BCOM','BTEC','BCA','BCOM','BCA','BTECH'],
+                   'Degree':['BCOM','BTECH','BCA','BTECH','BCOM','BTECH','BCA','BCOM','BCA','BTECH'],
                    'Age':[24,25,24,25,30,38,23,29,29,21]})
 
 gencoder = OneHotEncoder(handle_unknown='ignore')
