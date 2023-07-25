@@ -14,3 +14,18 @@ encoder = OneHotEncoder(handle_unknown='ignore')
 encoder_df = pd.DataFrame(encoder.fit_transform(df[['team']]).toarray())
 final_df = df.join(encoder_df)
 print(final_df)
+
+df1 = pd.DataFrame({'Gender':['M','M','F','M','F','F','M','F','M','F'],
+                   'Degree':['BCOM','BTECH','BCA','BTECH','BCOM','BTEC','BCA','BCOM','BCA','BTECH'],
+                   'Age':[24,25,24,25,30,38,23,29,29,21]})
+
+gencoder = OneHotEncoder(handle_unknown='ignore')
+gencoder_df = pd.DataFrame(encoder.fit_transform(df1[['Gender','Degree']]).toarray())
+final_df1 = df1.join(gencoder_df)
+print(final_df1)
+'''''
+dencoder = OneHotEncoder(handle_unknown='ignore')
+dencoder_df = pd.DataFrame(encoder.fit_transform(df1[['Degree']]).toarray())
+final_df2 = final_df1.join(dencoder_df)
+print(final_df2)
+'''''
