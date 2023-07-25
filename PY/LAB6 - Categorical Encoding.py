@@ -23,9 +23,3 @@ gencoder = OneHotEncoder(handle_unknown='ignore')
 gencoder_df = pd.DataFrame(encoder.fit_transform(df1[['Gender','Degree']]).toarray())
 final_df1 = df1.join(gencoder_df)
 print(final_df1)
-'''''
-dencoder = OneHotEncoder(handle_unknown='ignore')
-dencoder_df = pd.DataFrame(encoder.fit_transform(df1[['Degree']]).toarray())
-final_df2 = final_df1.join(dencoder_df)
-print(final_df2)
-'''''
