@@ -47,4 +47,14 @@ right = pd.DataFrame({'key1':['K0','K1','K1','K2'],
                       'D':['D0','D1','D2','D3']})
 print(left)
 print(right)
+
 print(pd.merge(left,right,on=['key1','key2']))
+
+left = pd.DataFrame({'A':['A0','A1','A2'],
+                     'B':['B0','B1','B2']},
+                    index=['K0','K1','K2'])
+right = pd.DataFrame({'C':['C0','C1','C2'],
+                      'D':['D0','D1','D2']},
+                     index=['K0','K2','K3'])
+
+print(left.join(right))
