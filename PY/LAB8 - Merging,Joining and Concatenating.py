@@ -1,5 +1,7 @@
 import pandas as pd
 
+#concatenation
+
 df1 = pd.DataFrame({'A':['A0','A1','A2','A3'],
                     'B':['B0','B1','B2','B3'],
                     'C':['C0','C1','C2','C3'],
@@ -19,10 +21,10 @@ print(df1)
 print(df2)
 print(df3)
 
-#concatenation
-
 print(pd.concat([df1,df2,df3]))
 print(pd.concat([df1,df2,df3],axis=1))
+
+#merging
 
 left = pd.DataFrame({'key':['K0','K1','K2','K3'],
                      'A':['A0','A1','A2','A3'],
@@ -32,8 +34,6 @@ right = pd.DataFrame({'key':['K0','K1','K2','K3'],
                       'D':['D0','D1','D2','D3']})
 print(left)
 print(right)
-
-#merging
 
 print(pd.merge(left,right,how='inner',on='key'))
 
@@ -49,6 +49,9 @@ print(left)
 print(right)
 
 print(pd.merge(left,right,on=['key1','key2']))
+
+#joining
+
 
 left = pd.DataFrame({'A':['A0','A1','A2'],
                      'B':['B0','B1','B2']},
